@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+
+	<title>Survey Form</title>
+	<meta name="generator" content="BBEdit 14.1" />
+	<meta name='description' content='Brief biography of Annegret Braun'>
+	<meta name='keywords' content='Biography, German, World War'>
+	<meta name='author' content='Biba Braun'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	
+ <link rel='stylesheet' type="text/css" href='style.css'>
+</head>
+
+<body>
+    <div id="intro">
+        <h1 id="title">Feelings Tracker</h1>
+        <p id="description">The purpose of this tracker is to gather data over time about how you are feeling, emotionally, physically, and track a level of mindfulness. The tracker was inspired in part by the circumflex model of affect (<a href="https://content.apa.org/doiLanding?doi=10.1037%2Fh0077714" target="_blank">Russell, 1980</a>). The idea that one could track their affect over time with a simple scale and two factors (happiness and activity) is a simple and straightforward way of seeing feelings as they manifest inside oneself over time.<br> I have added mindfulness and pain as two additional criteria to give a bigger picture. If you have any other criteria you would like to see tracked please send me a message via <a href="mailto: bhagavati.braun@gmail.com">email</a>.</p>
+        <!--insert image here, it's small, but when you click it it opens in front of the survey with the background darker and an obvious x to close it out https://www.elitesportpsy.org.au/wp-content/uploads/2015/05/circumplex.png-->
+    </div>
+ 
+   <form id="survey-form">
+        <div id="name-input">
+          <label for="name" id="name-label" class="label">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Gloria Gaynor">
+        </div><br>
+      
+        <div id="email-input">
+          <label for="email" id="email-label" class="label">Email: </label>
+            <input type="email" id="email" name="email" placeholder="youremail@domain.com">
+        </div><br>
+
+        <div id="mindfulness-input">
+          <label for="mindfulness" id="mindfulness-label" class="label">Mindfulness:</label>
+            <select id="mindfulness" name="mindfulness-dropdown">
+                <option value="-3">-3 very distracted</option>
+                <option value="-2">-2 somewhat distracted</option>
+                <option value="-1">-1 a little distracted</option>
+                <option value="0" selected>0 pretty neutral</option>
+                <option value="+1">1 a little mindful</option>
+                <option value="+2">2 somewhat mindful</option>
+                <option value="+3">3 very mindful</option>
+            </select>
+        </div><br>
+
+        <div id="activity-input">
+          <label id="activity-label" class="label">Activity:</label>
+            <!--hover-over description - what does 'activity' mean?-->
+            <input type="radio" id="activity-3" name="activity" value="-3">
+            <label for="activity-3"> -3</label>
+
+            <input type="radio" id="activity-2" name="activity" value="-2">
+            <label for="activity-2"> -2</label>
+
+            <input type="radio" id="activity-1" name="activity" value="-1">
+            <label for="activity-1"> -1</label>
+
+            <input type="radio" id="activity0" name="activity" value="0">
+            <label for="activity0"> 0</label>
+
+            <input type="radio" id="activity+1" name="activity" value="+1">
+            <label for="activity+1"> +1</label>
+
+            <input type="radio" id="activity+2" name="activity" value="+2">
+            <label for="activity+2"> +2</label>
+
+            <input type="radio" id="activity+3"  name="activity" value="+3">
+            <label for="activity+3"> +3</label>
+        </div><br>
+
+        <div id="happiness-input">
+          <label id="happiness-label" class="label">Happiness:</label> 
+            <input type="radio" id="happiness-3" name="happiness" value="-3">
+            <label for="happiness-3"> -3</label>
+
+            <input type="radio" id="happiness-2" name="happiness" value="-2">
+            <label for="happiness-2"> -2</label>
+
+            <input type="radio" id="happiness-1" name="happiness" value="-1">
+            <label for="happiness-1"> -1</label>
+
+            <input type="radio" id="happiness0" name="happiness" value="0">
+            <label for="happiness0"> 0</label>
+
+            <input type="radio" id="happiness+1" name="happiness" value="+1">
+            <label for="happiness+1"> +1</label>
+
+            <input type="radio" id="happiness+2" name="happiness" value="+2">
+            <label for="happiness+2"> +2</label>
+
+            <input type="radio" id="happiness+3" name="happiness" value="+3">
+            <label for="happiness+3"> +3</label>
+        </div><br>
+
+        <div id="pain-input">
+          <label id="pain-label" class="label">On a scale of 0 to 3, what is your pain level?</label>
+            <!--hover or ? that details pain scale-->
+            <input type="number" id="pain"  name="pain" min="0" max="3" value="0" step="1">
+        </div><br>
+
+        <div id="pain-type-input">
+          <label id="pain-type-label" class="label">Pain type:</label><br>
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-nerve-dull">Nerve pain - dull</label><br>
+
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-nerve-acute">Nerve pain - acute</label><br>
+
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-sciatic">Sciatic pain</label><br>
+
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-joint">Joint pain</label><br>
+
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-jaw">Jaw pain</label><br>
+
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-stomach">Stomach pain</label><br>
+
+            <input type="checkbox" id="pain-type">
+            <label for="pain-type-headache">Headache</label><br>
+        </div><br>
+
+        <div id="comments-input">
+            <label id="comments-label" class="label">Add details, thoughts, and things you would like to remember here:</label><br>
+            <textarea id="textarea"></textarea>
+        </div><br>
+
+        <div id="submit-input">
+            <input type="submit" id="submit" value="Submit">
+            <input type="reset" id="reset" value="Reset">
+        </div><br>
+   </form>
+  
+</body>
+</html>
